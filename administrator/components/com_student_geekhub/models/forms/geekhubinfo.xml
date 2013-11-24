@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_CREATED_BY"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_CREATED_BY"  /> 
+
+       <field name="student_foto" type="file"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_FOTO"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_FOTO" 
+                
+                
+                /> 
+
+       <field name="student_name" type="text"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_NAME"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_NAME" 
+                
+                
+                 required="true" 
+            class="student_name"
+            filter="safehtml"
+            size="25"
+            maxlength="50" /> 
+
+       <field name="date_of_birth" type="calendar"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_DATE_OF_BIRTH"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_DATE_OF_BIRTH" 
+                
+                
+                 required="true" 
+            class="student_date"
+            filter="safehtml" /> 
+
+       <field name="student_gender" type="radio"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_GENDER"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_GENDER" 
+                
+                
+                 required="true" 
+            filter="raw">
+                <option value="юнак">юнак</option>
+                <option value="дівчина">дівчина</option>
+        </field> 
+
+       <field name="student_grupe" type="list"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_GRUPE"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_GRUPE" 
+                
+                
+                 required="true" 
+            class="student_grupe"
+            filter="raw">
+                <option value="Frontend + CMS">Frontend + CMS</option>
+                <option value="Advanced CMS">Advanced CMS</option>
+                <option value="Advanced PHP">Advanced PHP</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="iOS">iOS</option>
+                <option value="Android">Android</option>
+        </field> 
+
+       <field name="student_gpa" type="text"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_GPA"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_GPA" 
+                
+                
+                 required="true" 
+            class="GPA"
+            filter="safehtml"
+            size="2"
+            maxlength="2" /> 
+
+       <field name="student_number" type="text"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_NUMBER"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_NUMBER" 
+                
+                
+                 required="true" 
+            class="student_number"
+            filter="safehtml"
+            size="10"
+            maxlength="10" /> 
+
+       <field name="student_info" type="editor"
+                
+            label="COM_STUDENT_GEEKHUB_FORM_LBL_GEEKHUBINFO_STUDENT_INFO"
+            description="COM_STUDENT_GEEKHUB_FORM_DESC_GEEKHUBINFO_STUDENT_INFO" 
+                
+                
+                
+            width="250"
+            height="100"
+            filter="safehtml" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_student_geekhub"
+                            section="geekhubinfo"
+                        />
+
+	</fieldset>
+
+</form>
