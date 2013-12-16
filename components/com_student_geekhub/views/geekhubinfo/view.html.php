@@ -103,6 +103,7 @@ class Student_geekhubViewGeekhubinfo extends JView {
 		{
 			$this->document->setMetadata('robots', $this->params->get('robots'));
 		}
-	}        
-    
+	}
+
+
 }

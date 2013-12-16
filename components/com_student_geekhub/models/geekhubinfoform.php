@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.modelform');
 jimport('joomla.event.dispatcher');
+JHTML::_('behavior.formvalidation');
 
 /**
  * Student_geekhub model.
